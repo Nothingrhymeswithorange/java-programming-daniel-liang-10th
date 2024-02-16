@@ -27,21 +27,17 @@ public class Exercise06_03 {
     }
 
     public static int reverse(int number) {
-        String temp = "";
-        while (number > 0) {
-            int t = number % 10;
-            number /= 10;
-            temp += t;
-
-        }
-        return Integer.parseInt(temp);
+         int reverseNum = 0;
+       while( n != 0){
+           reverseNum = reverseNum *10;
+          reverseNum += number % 10 ;
+          number = number / 10;
+       }
+       return reverseNum;
     }
 
     public static boolean isPalindrome(int number) {
-        String n1 = String.valueOf(number);
-        String n2 = String.valueOf(reverse(number));
-
-        return n1.equals(n2);
-
+        return ( number == reverse(number))
     }
+    
 }
